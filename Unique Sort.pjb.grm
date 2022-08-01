@@ -25,5 +25,5 @@
 }
 
 item.graph.V.stage.filter(uniqueSort)
-    .comply{"Sort stage ${it.stageName} is configured to prohibit duplicates. Consider replacing with a Remove Duplicates stage to improve your job's maintainability."}
+    .comply{"${config.readableStageTypes[it.stageType] ?: it.stageType} '${it.stageName}' is configured to prohibit duplicates. Consider replacing with an explicit Remove Duplicates stage to improve your job's maintainability."}
     
